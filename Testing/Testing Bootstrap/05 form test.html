@@ -4,6 +4,8 @@
 	<title>Form test</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/custom-style.css" rel="stylesheet">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -86,12 +88,14 @@
 				        </td>
 				        <td class="col-xs-4">
 				        	<div class="has-success">
-								<input type="text" class="form-control text-center" placeholder="True Positive">
+				        		<label class="sr-only" for="TruePositive"></label>
+								<input type="text" class="form-control text-center" id="TruePositive" placeholder="True Positive">
 							</div>
 				        </td>
 				        <td class="col-xs-4">
 				        	<div class="has-warning">
-								<input type="text" class="form-control text-center" placeholder="False Positive">
+				        		<label class="sr-only" for="FalsePositive"></label>
+								<input type="text" class="form-control text-center" id="FalsePositive" placeholder="False Positive">
 							</div>
 				        </td>
 				      </tr>
@@ -101,22 +105,60 @@
 				        </td>
 				        <td class="col-xs-4">
 				        	<div class="has-warning">
-								<input type="text" class="form-control text-center" placeholder="False Negative">
+				        		<label class="sr-only" for="FalseNegative"></label>
+								<input type="number" class="form-control text-center" id="FalseNegative" placeholder="False Negative">
 							</div>	
 				        </td>
 				        <td class="col-xs-4">
 				        	<div class="has-success">
-								<input type="text" class="form-control text-center" placeholder="True Negative">
+				        		<label class="sr-only" for="TrueNegative"></label>
+								<input type="number" class="form-control text-center" id="TrueNegative" placeholder="True Negative">
 							</div>
 				        </td>
 				      </tr>
 				    </tbody>
 				</table>
-		
-			<p class="text-center">
-				<button type="button" class="btn btn-default btn-lg">Calculate</button>
-			</p>
-		
+
+				<p class="text-center">
+					<button type="button" class="btn btn-default btn-lg" id="button">
+						Calculate
+					</button>
+				</p>
+				
+				<script type="text/javascript">
+					console.log("test")
+				
+					$('#button').click(function () {
+					var test = $("#FalseNegative").val();
+					console.log(test);
+				 });
+				</script>
+				
+				<!-- Modal -->
+	<!--			
+									<p class="text-center">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
+						Calculate
+					</button>
+				</p>
+				
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				      </div>
+				      <div class="modal-body">
+				        ...
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>-->
+					
 			</div>
 		</div>
 		
@@ -128,7 +170,9 @@
 			<li><del>Set fixed form width (Partially fixed)</del></li>
 			<li><del>Add "Submit" buttons</del></li>
 			<li><del>Extend css. Do not modify originals.</del></li>
-			<li>Implement forms</li>
+			<li>Validate input on the fly (should be number)</li>
+			<li><del>Implement forms</del></li>
+			<li>Display inputs</li>
 			<li>Deploy on Heroku</li>
 		</ul>
 		
