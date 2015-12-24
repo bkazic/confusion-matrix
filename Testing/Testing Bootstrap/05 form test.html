@@ -11,115 +11,123 @@
 		
 		</br>
 		<hr>
-		
 		<h3>Row based Form</h3>
 		</br>
-		<div class="row text-center">
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-3 col-xs-4">
-			</div>
-			<div class="col-md-3 col-xs-4">
-				<strong> Actual Positive </strong>			
-			</div>
-			<div class="col-md-3 col-xs-4">
-				<strong> Actual Negative </strong>
-			</div>
-		</div>
-		</br>
-		<div class="row text-center">
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-3 col-xs-4">
-				<strong> Predicted Positive </strong>
-			</div>
-			<div class="col-md-3 col-xs-4 has-success">
-				<input type="text" class="form-control text-center" placeholder="True Positive">			
-			</div>
-			<div class="col-md-3 col-xs-4 has-warning">
-				<input type="text" class="form-control text-center" placeholder="False Positive">
-			</div>
-		</div>
-		</br>
-		<div class="row text-center">
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-3 col-xs-4">
-				<strong> Predicted Negative </strong>
-			</div>
-			<div class="col-md-3 col-xs-4 has-warning">
-				<input type="text" class="form-control text-center" placeholder="False Negative">			
-			</div>
-			<div class="col-md-3 col-xs-4 has-success">
-				<input type="text" class="form-control text-center" placeholder="True Negative">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				
+				<div class="row text-center">
+					<div class="col-xs-4">
+					</div>
+					<div class="col-xs-4">
+						<strong> Actual Positive </strong>			
+					</div>
+					<div class="col-xs-4">
+						<strong> Actual Negative </strong>
+					</div>
+				</div>
+				
+				</br>
+				<div class="row text-center">
+					<div class="col-xs-4">
+						<strong> Predicted Positive </strong>
+					</div>
+					<div class="col-xs-4 has-success">
+						<input type="text" class="form-control text-center" placeholder="True Positive">			
+					</div>
+					<div class="col-xs-4 has-warning">
+						<input type="text" class="form-control text-center" placeholder="False Positive">
+					</div>
+				</div>
+				
+				</br>
+				<div class="row text-center">
+					<div class="col-xs-4">
+						<strong> Predicted Negative </strong>
+					</div>
+					<div class="col-xs-4 has-warning">
+						<input type="text" class="form-control text-center" placeholder="False Negative">			
+					</div>
+					<div class="col-xs-4 has-success">
+						<input type="text" class="form-control text-center" placeholder="True Negative">
+					</div>
+				</div>
+				
+			</br>
+			<p class="text-center">
+				<button type="button" class="btn btn-default btn-lg">Calculate</button>
+			</p>
+				
 			</div>
 		</div>
 		
-		</br>
-		<p class="text-center">
-			<button type="button" class="btn btn-default btn-lg">Calculate</button>
-		</p>
 		
 		<hr>
 		<h3>Table based Form</h3>
 		</br>
-		<table class="table table-borderless text-center">
-		    <tbody>
-		      <tr>
-		        <td>
-		        </td>
-		        <td class="col-xs-4">
-					<strong> Actual Positive </strong>	
-		        </td>
-		        <td class="col-xs-4">
-					<strong> Actual Negative </strong>
-		        </td>
-		      </tr>
-		      <tr>
-		        <td class="col-xs-4">
-					<strong> Predicted Positive </strong>
-		        </td>
-		        <td class="col-xs-4">
-		        	<div class="has-success">
-						<input type="text" class="form-control text-center" placeholder="True Positive">
-					</div>
-		        </td>
-		        <td class="col-xs-4">
-		        	<div class="has-warning">
-						<input type="text" class="form-control text-center" placeholder="False Positive">
-					</div>
-		        </td>
-		      </tr>
-		      <tr>
-		      	<td class="col-xs-4">
-					<strong> Predicted Negative </strong>
-		        </td>
-		        <td class="col-xs-4">
-		        	<div class="has-warning">
-						<input type="text" class="form-control text-center" placeholder="False Negative">
-					</div>	
-		        </td>
-		        <td class="col-xs-4">
-		        	<div class="has-success">
-						<input type="text" class="form-control text-center" placeholder="True Negative">
-					</div>
-		        </td>
-		      </tr>
-		    </tbody>
-		</table>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+			
+				<table class="table table-borderless text-center">
+				    <tbody>
+				      <tr>
+				        <td>
+				        </td>
+				        <td class="col-xs-4">
+							<strong> Actual Positive </strong>	
+				        </td>
+				        <td class="col-xs-4">
+							<strong> Actual Negative </strong>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td class="col-xs-4">
+							<strong> Predicted Positive </strong>
+				        </td>
+				        <td class="col-xs-4">
+				        	<div class="has-success">
+								<input type="text" class="form-control text-center" placeholder="True Positive">
+							</div>
+				        </td>
+				        <td class="col-xs-4">
+				        	<div class="has-warning">
+								<input type="text" class="form-control text-center" placeholder="False Positive">
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				      	<td class="col-xs-4">
+							<strong> Predicted Negative </strong>
+				        </td>
+				        <td class="col-xs-4">
+				        	<div class="has-warning">
+								<input type="text" class="form-control text-center" placeholder="False Negative">
+							</div>	
+				        </td>
+				        <td class="col-xs-4">
+				        	<div class="has-success">
+								<input type="text" class="form-control text-center" placeholder="True Negative">
+							</div>
+				        </td>
+				      </tr>
+				    </tbody>
+				</table>
 		
-		<p class="text-center">
-			<button type="button" class="btn btn-default btn-lg">Calculate</button>
-		</p>
+			<p class="text-center">
+				<button type="button" class="btn btn-default btn-lg">Calculate</button>
+			</p>
+		
+			</div>
+		</div>
 		
 		<hr>
 		<h3>TODO List</h3>
 		<ul>
 			<li><del>Design row based form</del></li>
 			<li><del>Design table based form</del></li>
-			<li>Set fixed form width (Partially fixed)</li>
+			<li><del>Set fixed form width (Partially fixed)</del></li>
 			<li><del>Add "Submit" buttons</del></li>
-			<li><del>Extend css. Do not modify originals.<del></li>
+			<li><del>Extend css. Do not modify originals.</del></li>
 			<li>Implement forms</li>
 			<li>Deploy on Heroku</li>
 		</ul>
@@ -128,8 +136,14 @@
 		
 		<h3>Questions</h3>
 		<ul>
-			<li>How to set fixed form width? (Partially fixed - but what happens when I'll add more columns?)</li>
-			<li>How to modify bootstrap.css and see changes also in bootstrap.min.css?</li>
+			<li>
+				Q: How to set fixed form width? 
+				A: Use one outer row and define col width.
+			</li>
+			<li>
+				Q: How to modify bootstrap.css and see changes also in bootstrap.min.css? 
+				A: Just use costum extension of css. If it gets big, you can minify it.
+			</li>
 		</ul>
 		
 	</div>
