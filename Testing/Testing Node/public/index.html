@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Online Confusion Matrix</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+		crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+		crossorigin="anonymous"></script>
+		
+	<!-- Costumized CSS -->
+	<link href="css/custom-style.css" rel="stylesheet">
+	
+	<!-- jQuery Ajax -->
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	
+		<!-- Title -->
+		<div class="title" align="center">
+			<h1>Confusion Matrix
+				</br>
+				<small>Online Calculator</small>
+			</h1>
+			<small>by Blaz Kazic</small>
+		</div>
+		
+		</br>
+		<hr>
+		</br>
+		
+		<!-- Confusion Matrix table -->
+		<div class="confusionMatrix">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+				
+					<table class="table table-borderless text-center">
+					    <tbody>
+					      <tr>
+					        <td>
+					        </td>
+					        <td class="col-xs-4">
+								<strong> Actual Positive </strong>	
+					        </td>
+					        <td class="col-xs-4">
+								<strong> Actual Negative </strong>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td class="col-xs-4">
+								<strong> Predicted Positive </strong>
+					        </td>
+					        <td class="col-xs-4">
+					        	<div class="has-success">
+					        		<label class="sr-only" for="TruePositive"></label>
+									<input type="text" class="form-control text-center" id="TruePositive" placeholder="True Positive">
+								</div>
+					        </td>
+					        <td class="col-xs-4">
+					        	<div class="has-warning">
+					        		<label class="sr-only" for="FalsePositive"></label>
+									<input type="text" class="form-control text-center" id="FalsePositive" placeholder="False Positive">
+								</div>
+					        </td>
+					      </tr>
+					      <tr>
+					      	<td class="col-xs-4">
+								<strong> Predicted Negative </strong>
+					        </td>
+					        <td class="col-xs-4">
+					        	<div class="has-warning">
+					        		<label class="sr-only" for="FalseNegative"></label>
+									<input type="text" class="form-control text-center" id="FalseNegative" placeholder="False Negative">
+								</div>	
+					        </td>
+					        <td class="col-xs-4">
+					        	<div class="has-success">
+					        		<label class="sr-only" for="TrueNegative"></label>
+									<input type="text" class="form-control text-center" id="TrueNegative" placeholder="True Negative">
+								</div>
+					        </td>
+					      </tr>
+					    </tbody>
+					</table>
+
+					<p class="text-center">
+						<button type="button" class="btn btn-default btn-lg" id="button">
+							Calculate
+						</button>
+					</p>
+					
+					<script type="text/javascript">
+						console.log("test")
+					
+						$('#button').click(function () {
+							var TP = $("#TruePositive").val();
+							var FP = $("#FalsePositive").val();
+							var FN = $("#FalseNegative").val();
+							var TN = $("#TrueNegative").val();
+							
+							console.log("TP:" + TP + " FP:" + FP + " FN:" + FN + " TN:" + TN);
+					 });
+					</script>
+										
+				</div>
+			</div>
+		</div>
+
+		</br>
+		<hr>
+		
+		<!-- Questions Section -->
+		<div class="questions" align="center">
+			<h3>TODO</h3>
+			<del>Update index.html</del></br>
+			<del>Create backend node app.js</del></br>
+			<del>bind server with index.html</del></br>
+			Push to github</br>
+			Create project on Heroku</br>
+			Connect with github</br>
+			
+		</div>
+		
+	</div>
+</body>
+</html>
