@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Confusion Matrix</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,10 +52,10 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#results">Results</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -71,31 +72,111 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                    <!-- Title -->
+					<div class="title" align="center">
+						<h1>Confusion Matrix
+							</br>
+							<small>Online Calculator</small>
+						</h1>
+						<small>by Blaž Kažič</small>
+					</div>
+					</br></br>
+					
+					<!-- Confusion Matrix table -->
+					<div class="confusionMatrix">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+							
+								<table class="table table-borderless text-center">
+								    <tbody>
+								      <tr>
+								        <td>
+								        </td>
+								        <td class="col-xs-4">
+											<strong> Actual Positive </strong>	
+								        </td>
+								        <td class="col-xs-4">
+											<strong> Actual Negative </strong>
+								        </td>
+								      </tr>
+								      <tr>
+								        <td class="col-xs-4">
+											<strong> Predicted Positive </strong>
+								        </td>
+								        <td class="col-xs-4">
+								        	<div class="has-success">
+								        		<label class="sr-only" for="TruePositive"></label>
+												<input type="text" class="form-control text-center" id="TruePositive" placeholder="True Positive">
+											</div>
+								        </td>
+								        <td class="col-xs-4">
+								        	<div class="has-warning">
+								        		<label class="sr-only" for="FalsePositive"></label>
+												<input type="text" class="form-control text-center" id="FalsePositive" placeholder="False Positive">
+											</div>
+								        </td>
+								      </tr>
+								      <tr>
+								      	<td class="col-xs-4">
+											<strong> Predicted Negative </strong>
+								        </td>
+								        <td class="col-xs-4">
+								        	<div class="has-warning">
+								        		<label class="sr-only" for="FalseNegative"></label>
+												<input type="text" class="form-control text-center" id="FalseNegative" placeholder="False Negative">
+											</div>	
+								        </td>
+								        <td class="col-xs-4">
+								        	<div class="has-success">
+								        		<label class="sr-only" for="TrueNegative"></label>
+												<input type="text" class="form-control text-center" id="TrueNegative" placeholder="True Negative">
+											</div>
+								        </td>
+								      </tr>
+								    </tbody>
+								</table>
+																					
+							</div>
+						</div>
+					</div>
+		
+                    <a class="btn btn-default btn-lg page-scroll" href="#results">Calculate</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Results Section -->
+    <section id="results" class="results-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Results Section</h1>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>About Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    
+                    </br></br>
+                    
+					<h3>TODO list</h3>
+					<del>Update index.html</del></br>
+					<del>Create backend node app.js</del></br>
+					<del>bind server with index.html</del></br>
+					<del>Push to github</del></br>
+					<del>Create project on Heroku</del></br>
+					<del>Connect with github</del></br>
+		
                 </div>
             </div>
         </div>

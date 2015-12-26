@@ -25,6 +25,7 @@ html {
     .top-nav-collapse {
         padding: 0;
     }
+
 }
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
@@ -32,29 +33,49 @@ The padding is very important to make sure the scrollspy picks up the right area
 of those sections to manage the look and feel of the site. */
 
 .intro-section {
-    height: 100%;
-    padding-top: 150px;
+    min-height: 100%;	
+    padding: 150px 0 50px 0;
     text-align: center;
     background: #fff;
 }
 
-.about-section {
-    height: 100%;
-    padding-top: 150px;
+.results-section {
+    min-height: 100%;	
+    padding: 150px 0 50px 0;
     text-align: center;
     background: #eee;
 }
 
-.services-section {
-    height: 100%;
-    padding-top: 150px;
+.about-section {
+    min-height: 100%;	
+    padding: 150px 0 50px 0;
     text-align: center;
     background: #fff;
 }
 
 .contact-section {
-    height: 100%;
-    padding-top: 150px;
+    min-height: 100%;	
+    padding: 150px 0 50px 0;
     text-align: center;
     background: #eee;
+}
+
+/* Addjust padding for mobile screens */
+@media(max-width:767px) {
+
+    .intro-section {
+	    padding-top: 50px;
+	}
+	
+	.results-section {
+	    padding-top: 50px;
+	}
+
+	.about-section {
+	    padding-top: 50px;
+	}
+
+	.contact-section {
+	    padding-top: 50px;
+	}
 }
