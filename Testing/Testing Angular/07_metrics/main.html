@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="javascripts/cmApp.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+  <body ng-app="cmApp">
+    <div id='main' class="container" ng-controller="mainController">
+      
+      <h1 class="text-center">Testing Forms </br><small>With Bootstrap & AngularJs</small></h1>
+		
+		</br>
+		<hr>
+		</br>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				
+				<div class="row text-center">
+					<div class="col-xs-4">
+					</div>
+					<div class="col-xs-4">
+						<strong> Actual Positive </strong>			
+					</div>
+					<div class="col-xs-4">
+						<strong> Actual Negative </strong>
+					</div>
+				</div>
+				
+				</br>
+				<div class="row text-center">
+					<div class="col-xs-4">
+						<strong> Predicted Positive </strong>
+					</div>
+					<div class="col-xs-4 has-success">
+						<input type="text" class="form-control text-center" placeholder="True Positive" ng-change="update()" ng-model="data.TP">			
+					</div>
+					<div class="col-xs-4 has-warning">
+						<input type="text" class="form-control text-center" placeholder="False Positive" ng-change="update()" ng-model="data.FP">
+					</div>
+				</div>
+				
+				</br>
+				<div class="row text-center">
+					<div class="col-xs-4">
+						<strong> Predicted Negative </strong>
+					</div>
+					<div class="col-xs-4 has-warning">
+						<input type="text" class="form-control text-center" placeholder="False Negative" ng-change="update()" ng-model="data.FN">			
+					</div>
+					<div class="col-xs-4 has-success">
+						<input type="text" class="form-control text-center" placeholder="True Negative" ng-change="update()" ng-model="data.TN">
+					</div>
+				</div>
+			</br>
+							
+			</div>
+		</div>
+		
+		</br>
+		<hr>
+		</br>
+		
+		<div class="data text-center">
+            <p><strong>True Positive:</strong> {{data.TP}}</p>
+            <p><strong>False Positive:</strong> {{data.FP}}</p>
+            <p><strong>False Negative:</strong> {{data.FN}}</p>
+            <p><strong>True Negative:</strong> {{data.TN}}</p>
+            </br>
+            <p><strong>Sensitivity:</strong> {{metrics.Sensitivity | number:4}}</p>
+            <p><strong>Specificity:</strong> {{metrics.Specificity | number:4}}</p>
+		</div>
+		
+    </div>
+  </body>
+</html>
