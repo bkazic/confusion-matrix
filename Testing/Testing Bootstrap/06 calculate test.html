@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Calculate test</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom-style.css" rel="stylesheet">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	
+	 <script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+			$('#button').click(function () {
+				var Num1 = $("#Num1").val();
+				var Num2 = $("#Num2").val();
+				
+				console.log("Num1:" + Num1 + " Num2:" + Num2);
+				$("#Ans").val(Number(Num1) + Number(Num2));
+	 		});
+	 	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Calculate test <small>With Bootstrap</small></h1>
+		</br>
+		<hr>
+		</br>
+		
+		<strong> jQuery val() Method </strong>
+		</br></br>
+		
+		<form class="form-inline">
+		  <div class="form-group">
+		    <label class="sr-only" for="Num1">Num1</label>
+		    <input type="number" class="form-control" id="Num1" placeholder="Num1">
+		  </div>
+		  +
+		  <div class="form-group">
+		    <label class="sr-only" for="Num2">Num2</label>
+		    <input type="number" class="form-control" id="Num2" placeholder="Num2">
+		  </div>
+		  =
+		  <div class="form-group">
+		    <label class="sr-only" for="Ans">Ans</label>
+		    <input type="text" class="form-control" id="Ans" placeholder="Ans" readonly>
+		  </div>
+		  </br></br>
+		  <button type="button" class="btn btn-default" id="button">Calculate</button>
+		</form>
+		
+		</br>
+		<hr>
+		</br>
+		
+		<strong> Input Text value Property </strong>
+		</br></br>
+		
+		<form class="form-inline">
+		  <div class="form-group">
+		    <input type="number" class="form-control" id="Num11" placeholder="Num11">
+		  </div>
+		  +
+		  <div class="form-group">
+		    <input type="number" class="form-control" id="Num22" placeholder="Num22">
+		  </div>
+		  =
+		  <div class="form-group">
+		    <input type="text" class="form-control" id="Ans2" placeholder="Ans2" readonly>
+		  </div>
+		  </br></br>
+		  <button type="button" onclick="myFunction()" id="button">Calculate</button>
+		</form>
+		
+		<script>
+		function myFunction() {
+			var Num11 = $("#Num11").val();
+			var Num22 = $("#Num22").val();
+				
+		    document.getElementById("Ans2").value = Number(Num11) + Number(Num22);
+		}
+		</script>
+		
+		</br>
+		<hr>
+		</br>
+		
+	</div>
+</body>
+</html>
+
+<!--
+References:
+http://www.w3schools.com/jquery/html_val.asp
+http://www.w3schools.com/jsref/prop_text_value.asp
+http://www.w3schools.com/tags/att_input_value.asp
+-->
