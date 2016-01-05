@@ -12,7 +12,8 @@
     <title>Scrolling Nav - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--  <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -29,7 +30,7 @@
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="cmApp">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -68,7 +69,7 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro-section" ng-app="cmApp">
+    <section id="intro" class="intro-section">
         <div class="container" ng-controller="mainController">
             <div class="row">
                 <div class="col-lg-12">
@@ -105,13 +106,13 @@
                                             <td class="col-xs-4">
                                                 <div class="has-success">
                                                     <label class="sr-only" for="TruePositive"></label>
-                                                    <input type="text" class="form-control text-center" placeholder="True Positive" ng-model="data.TP" ng-change="update()">
+                                                    <input type="number" class="form-control text-center" placeholder="True Positive" ng-model="data.TP" ng-change="update()">
                                                 </div>
                                             </td>
                                             <td class="col-xs-4">
                                                 <div class="has-warning">
                                                     <label class="sr-only" for="FalsePositive"></label>
-                                                    <input type="text" class="form-control text-center" placeholder="False Positive" ng-model="data.FP" ng-change="update()">
+                                                    <input type="number" class="form-control text-center" placeholder="False Positive" ng-model="data.FP" ng-change="update()">
                                                 </div>
                                             </td>
                                         </tr>
@@ -122,13 +123,13 @@
                                             <td class="col-xs-4">
                                                 <div class="has-warning">
                                                     <label class="sr-only" for="FalseNegative"></label>
-                                                    <input type="text" class="form-control text-center" placeholder="False Negative" ng-model="data.FN" ng-change="update()">
+                                                    <input type="number" class="form-control text-center" placeholder="False Negative" ng-model="data.FN" ng-change="update()">
                                                 </div>
                                             </td>
                                             <td class="col-xs-4">
                                                 <div class="has-success">
                                                     <label class="sr-only" for="TrueNegative"></label>
-                                                    <input type="text" class="form-control text-center" placeholder="True Negative" ng-model="data.TN" ng-change="update()">
+                                                    <input type="number" class="form-control text-center" placeholder="True Negative" ng-model="data.TN" ng-change="update()">
                                                 </div>
                                             </td>
                                         </tr>
@@ -138,29 +139,41 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Calculate button -->
                     <a class="btn btn-default btn-lg page-scroll" href="#results">Calculate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-section">
+
+        <!-- Google Ads -->
+        <div class="ads">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:728px;height:90px;"
+                             data-ad-client="ca-pub-4807770044227876"
+                             data-ad-slot="1764616909"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" ng-controller="mainController">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="results-header">Results Section</h1>
 
                     <!-- Results table -->
-                    <br><br>
                     <div class="data text-center">
-
-                        <p><strong>True Positive:</strong> {{data.TP}}</p>
-                        <p><strong>False Positive:</strong> {{data.FP}}</p>
-                        <p><strong>False Negative:</strong> {{data.FN}}</p>
-                        <p><strong>True Negative:</strong> {{data.TN}}</p>
-
-                        <br>
-                        <p><strong>Sensitivity:</strong> {{old.Sensitivity | number:4}}</p>
-                        <p><strong>Specificity:</strong> {{old.Specificity | number:4}}</p>
-
-                        <br>
-                        <div class="metric text-center" ng-repeat="metric in metrics">
-                            <p><strong>{{metric.name}}:</strong> {{metric.value | number:4}}</p>
-                        </div>
-
-                        <br>
                         <table class="table table-hover text-center">
                             <thead>
                                 <tr>
@@ -171,9 +184,10 @@
                             </thead>
                             <tbody>
                                 <tr class="metric text-center" ng-repeat="metric in metrics">
-                                    <td><strong>{{metric.name}}</strong></td>
-                                    <td>{{metric.value | number:4}}</td>
-                                    <td>TODO</td>
+                                    <td><strong> {{metric.name}} </strong></td>
+                                    <td> {{metric.value | number:4 }}</td>
+                                    <!-- <td> {{(metric.value | number:4)*1 || 'NaN' }}</td> -->
+                                    <td> {{metric.derivation}} </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -184,37 +198,23 @@
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section id="results" class="results-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Results Section</h1>
-                    
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>About Section</h1>
-                    
+
                     <br><br>
-                    
-					<h3>TODO list</h3>
-					<del>Update index.html</del><br>
-					<del>Create backend node app.js</del><br>
-					<del>bind server with index.html</del><br>
-					<del>Push to github</del><br>
-					<del>Create project on Heroku</del><br>
-					<del>Connect with github</del><br>
-		
+
+                    <h3>TODO list</h3>
+                    <del>Update index.html</del><br>
+                    <del>Create backend node app.js</del><br>
+                    <del>bind server with index.html</del><br>
+                    <del>Push to github</del><br>
+                    <del>Create project on Heroku</del><br>
+                    <del>Connect with github</del><br>
+
                 </div>
             </div>
         </div>
@@ -244,7 +244,7 @@
     <!-- AngularJs -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
     <script src="js/cmApp.js"></script>
-    
+
     <!-- Confusion Matrix -->
     <script src="js/metrics.js"></script>
 

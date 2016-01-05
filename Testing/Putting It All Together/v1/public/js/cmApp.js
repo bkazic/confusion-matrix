@@ -2,26 +2,17 @@
 var app = angular.module('cmApp', []);
 
 app.controller('mainController', function($scope){
-	$scope.data = { TP: '', FP: '', FN: '', TN: '' };
-    $scope.old = {};
-
-    // this array should be specified by front end check boxes
-    //$scope.test = [
-    //    { name: "Sensitivity", value: undefined, update: function (data) { this.value = Number(data.TP) / (Number(data.TP) + Number(data.FN)) } }, 
-    //    { name: "Specificity", value: undefined, update: function (data) { this.value = data.TN / (data.FP + data.TN) } }
-    //];
-    // metrics recieved from metrics.js
-    $scope.metrics = [metrics.Sensitivity, metrics.Specificity];
+	$scope.data = { TP: null, FP: null, FN: null, TN: null };
+    
+    // convert subobjects of metrics object to array, later this array should be specified by front end check boxes
+    $scope.metrics = Object.keys(metrics).map(function (key) { return metrics[key] });
 
 	// update metrics on the fly
 	$scope.update = function() {
-		var TP = Number($scope.data.TP);
-		var FP = Number($scope.data.FP);
-		var FN = Number($scope.data.FN);
-		var TN = Number($scope.data.TN);
-
-		$scope.old.Sensitivity = TP/(TP + FN);
-        $scope.old.Specificity = TN / (FP + TN);
+		var TP = $scope.data.TP == null ? undefined : $scope.data.TP;
+		var FP = $scope.data.FP == null ? undefined : $scope.data.FP;
+		var FN = $scope.data.FN == null ? undefined : $scope.data.FN;
+		var TN = $scope.data.TN == null ? undefined : $scope.data.TN;
 
         // update value for each metric
         $scope.metrics.forEach(function (metric) {
