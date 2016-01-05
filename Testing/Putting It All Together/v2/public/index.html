@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Confusion Matrix</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section" ng-app="cmApp">
+        <div class="container" ng-controller="mainController">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Title -->
+                    <div class="title" align="center">
+                        <h1>
+                            Confusion Matrix
+                            <br>
+                            <small>Online Calculator</small>
+                        </h1>
+                    </div>
+                    <br><br>
+
+                    <!-- Confusion Matrix table -->
+                    <div class="confusionMatrix">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+
+                                <table class="table table-borderless text-center">
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td class="col-xs-4">
+                                                <strong> Actual Positive </strong>
+                                            </td>
+                                            <td class="col-xs-4">
+                                                <strong> Actual Negative </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-xs-4">
+                                                <strong> Predicted Positive </strong>
+                                            </td>
+                                            <td class="col-xs-4">
+                                                <div class="has-success">
+                                                    <label class="sr-only" for="TruePositive"></label>
+                                                    <input type="number" class="form-control text-center" placeholder="True Positive" ng-model="data.TP" ng-change="update()">
+                                                </div>
+                                            </td>
+                                            <td class="col-xs-4">
+                                                <div class="has-warning">
+                                                    <label class="sr-only" for="FalsePositive"></label>
+                                                    <input type="number" class="form-control text-center" placeholder="False Positive" ng-model="data.FP" ng-change="update()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-xs-4">
+                                                <strong> Predicted Negative </strong>
+                                            </td>
+                                            <td class="col-xs-4">
+                                                <div class="has-warning">
+                                                    <label class="sr-only" for="FalseNegative"></label>
+                                                    <input type="number" class="form-control text-center" placeholder="False Negative" ng-model="data.FN" ng-change="update()">
+                                                </div>
+                                            </td>
+                                            <td class="col-xs-4">
+                                                <div class="has-success">
+                                                    <label class="sr-only" for="TrueNegative"></label>
+                                                    <input type="number" class="form-control text-center" placeholder="True Negative" ng-model="data.TN" ng-change="update()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Calculate button -->
+                    <div class="calculate-btn">
+                        <a class="btn btn-default btn-lg page-scroll" href="#ads">Calculate</a>
+                    </div>
+
+                    <!-- Google Ads -->
+                    <div id="ads" class="google-ads">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <ins class="adsbygoogle"
+                                         style="display:inline-block;width:728px;height:90px;"
+                                         data-ad-client="ca-pub-4807770044227876"
+                                         data-ad-slot="1764616909"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results table -->
+                    <div class="results-table">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-4 text-center">Measure</th>
+                                    <th class="col-xs-4 text-center">Value</th>
+                                    <th class="col-xs-4 text-center">Derivations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="metric" ng-repeat="metric in metrics">
+                                    <td><strong> {{metric.name}} </strong></td>
+                                    <td> {{metric.value | number:4 }}</td>
+                                    <!-- <td> {{(metric.value | number:4)*1 || 'NaN' }}</td> -->
+                                    <td> {{metric.derivation}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Section</h1>
+
+                    <br><br>
+
+                    <h3>TODO list</h3>
+                    <del>Update index.html</del><br>
+                    <del>Create backend node app.js</del><br>
+                    <del>bind server with index.html</del><br>
+                    <del>Push to github</del><br>
+                    <del>Create project on Heroku</del><br>
+                    <del>Connect with github</del><br>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+    <!-- AngularJs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="js/cmApp.js"></script>
+
+    <!-- Confusion Matrix -->
+    <script src="js/metrics.js"></script>
+
+</body>
+
+</html>
