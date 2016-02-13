@@ -39,7 +39,7 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
-.about-section {
+.measures-section {
     min-height: 100%;	
     padding: 150px 0 50px 0;
     text-align: center;
@@ -60,7 +60,7 @@ of those sections to manage the look and feel of the site. */
 	    padding-top: 50px;
 	}
 	
-	.about-section {
+	.measures-section {
 	    padding-top: 50px;
 	}
 
