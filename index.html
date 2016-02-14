@@ -204,7 +204,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                    <h1 class="title">Contact Section</h1>
+                    <form action="mailto:bkazic@gmail.com" enctype="text/plain" method="post">
+                        <p>Name: <input name="Name" type="text" id="Name" size="40"></p>
+                        <p>E-mail address: <input name="E-mail" type="text" id="E-mail" size="40"></p>
+                        <p>Comment:</p>
+                        <p>
+                            <textarea name="Comment" cols="55" rows="5"
+                                      id="Comment"></textarea>
+                        </p>
+                        <p><input type="submit" name="Submit" value="Submit"></p>
+                    </form>
                 </div>
             </div>
         </div>
