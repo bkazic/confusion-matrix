@@ -167,8 +167,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="metric" ng-repeat="metric in metrics">
-                                    <td><strong> {{metric.name}} </strong></td>
+                                <tr class="metric" ng-repeat="metric in metrics" title={{metric.longName}}>
+                                    <td><a class="table-links" href=" #measures" table-scroll><strong> {{metric.name}} </strong></a></td>
                                     <td> {{metric.value | number:4 }}</td>
                                     <!-- <td> {{(metric.value | number:4)*1 || 'NaN' }}</td> -->
                                     <td> {{metric.derivation}} </td>

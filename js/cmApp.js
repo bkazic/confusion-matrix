@@ -1,6 +1,7 @@
 //chirpApp.js
 var app = angular.module('cmApp', []);
 
+//ref: http://stackoverflow.com/questions/23861369/using-angularjs-how-to-perform-math-operations-on-textboxes-and-see-result-as-t
 app.controller('mainController', function($scope){
 	$scope.data = { TP: null, FP: null, FN: null, TN: null };
     
@@ -21,5 +22,37 @@ app.controller('mainController', function($scope){
         })
 	}
 });
-	
-//REF: http://stackoverflow.com/questions/23861369/using-angularjs-how-to-perform-math-operations-on-textboxes-and-see-result-as-t
+
+//hack to use jQuery page-scroll inside ng-repeat 
+//ref: http://stackoverflow.com/questions/30685321/jquery-functions-not-working-with-ng-repeat
+//ref: http://stackoverflow.com/questions/20482047/jquery-not-working-with-ng-repeat-results
+app.directive('tableScroll', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            element.on('click', function (event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        }
+    }
+})
+
+//// example how to add tooltip in ng-repeat
+//app.directive('tooltip', function () {
+//    return {
+//        restrict: 'A',
+//        link: function (scope, element, attrs) {
+//            $(element).hover(function () {
+//                // on mouseenter
+//                $(element).tooltip('show');
+//            }, function () {
+//                // on mouseleave
+//                $(element).tooltip('hide');
+//            });
+//        }
+//    };
+//});
