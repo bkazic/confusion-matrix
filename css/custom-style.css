@@ -24,3 +24,22 @@
 a.table-links {
     color: #000;
 }
+
+.responsive-ad {
+    width: 200px;
+    height: 60px;
+}
+
+@media(min-width: 500px) {
+    .responsive-ad {
+        width: 468px;
+        height: 60px;
+    }
+}
+
+@media(min-width: 800px) {
+    .responsive-ad {
+        width: 728px;
+        height: 90px;
+    }
+}
