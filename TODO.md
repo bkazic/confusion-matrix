@@ -1,0 +1,30 @@
+# TODO list
+
+### General
+- [ ] Add more text on `Measures` section
+- [ ] Change `Measures` tab to `About`
+- [ ] Create a Release `v1.0` on Github
+- [x] Setup `Contact` form
+
+### Future:
+- [ ] Classification matrix with several classes 
+- [ ] Create input table with AngularJs
+- [ ] Import/Export functionality?
+- [ ] Visualisations?
+
+### Search Engine Optimisation
+- [ ] Add meta description content
+- [ ] Submit a sitemap file
+- [ ] Add `robots.txt`
+
+### Web hosting
+- [x] Use Gihub pages for hosting
+- [x] Buy a domain name `onlineconfusionmatrix.com`
+- [x] Setup DNS to Github pages site
+
+### Monetization
+- [x] Setup Google AdSense
+  - [ ] was rejected - *Insufficient content*
+- [x] Setup Google Analytics
+- [x] Setup Google Webmaster
+- [ ] Add `Donate` button
