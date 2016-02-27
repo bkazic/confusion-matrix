@@ -16,6 +16,7 @@
 - [ ] Add meta description content
 - [ ] Submit a sitemap file
 - [ ] Add `robots.txt`
+- [ ] External links to my site (from *wiki*, *formums*, etc.)  
 
 ### Web hosting
 - [x] Use Gihub pages for hosting
