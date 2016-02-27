@@ -29,3 +29,4 @@
 - [x] Setup Google Analytics
 - [x] Setup Google Webmaster
 - [ ] Add `Donate` button
+- [ ] Amazon affiliate program (Data Mining, by *Ian H. Witten*, p. *164*)
