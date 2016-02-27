@@ -22,6 +22,7 @@
 - [x] Use Gihub pages for hosting
 - [x] Buy a domain name `onlineconfusionmatrix.com`
 - [x] Setup DNS to Github pages site
+- [ ] Domain `errormatrix.com` is also free - maybe buy and make `301` redirect
 
 ### Monetization
 - [x] Setup Google AdSense
