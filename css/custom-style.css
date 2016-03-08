@@ -28,13 +28,13 @@ a.table-links {
 .responsive-ad {
     width: 200px;
     height: 60px;
+    margin: 0 auto; float: none; display: block; text-align:center;
 }
 
 @media(min-width: 500px) {
     .responsive-ad {
-        /*width: 468px;*/
-        /*height: 60px;*/
-        margin: 0 auto; float: none; display: block; text-align:center;
+        width: 468px;
+        height: 60px;
     }
 }
 

@@ -46,24 +46,39 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
-.measures-section {
+.example-section {
     min-height: 100%;	
     padding: 150px 0 50px 0;
     text-align: center;
     background: #fff;
 }
 
-.contact-section {
+.measures-section {
     min-height: 100%;	
     padding: 150px 0 50px 0;
     text-align: center;
     background: #eee;
 }
 
+.contact-section {
+    min-height: 100%;	
+    padding: 150px 0 50px 0;
+    text-align: center;
+    background: #fff;
+}
+
 /* Addjust padding for mobile screens */
 @media(max-width:767px) {
 
     .intro-section {
+	    padding-top: 50px;
+	}
+
+    .about-section {
+	    padding-top: 50px;
+	}
+    
+    .example-section {
 	    padding-top: 50px;
 	}
 	
