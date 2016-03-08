@@ -32,8 +32,9 @@ a.table-links {
 
 @media(min-width: 500px) {
     .responsive-ad {
-        width: 468px;
-        height: 60px;
+        /*width: 468px;*/
+        /*height: 60px;*/
+        margin: 0 auto; float: none; display: block; text-align:center;
     }
 }
 

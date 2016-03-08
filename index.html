@@ -66,6 +66,9 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#measures">Measures</a>
                     </li>
                     <li>
@@ -194,11 +197,100 @@
     </section>
 
     <!-- Measures Section -->
+    <section id="about" class="about-section">
+        <div class="container" ng-controller="mainController">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="title">About</h1>
+                    <div class="col-sm-8 col-sm-offset-2 text-justify">
+                        <p>
+                            A <b>Confusion Matrix</b> is a popular representation of the performance of
+                            classification models. The matrix (table) shows us the number of correctly
+                            and incorrectly classified examples, compared to the actual outcomes
+                            (target value) in the test data. One of the advantages of using confusion
+                            matrix as <b>evaluation tool</b> is that it allows more <b>detailed analysis</b>
+                            (such as if the model is confusing two classes), than simple proportion
+                            of correctly classified examples (accuracy) which can give misleading
+                            results if the dataset is unbalanced (i.e.  when there are huge differences
+                            in number of between difference classes).
+                        </p>
+                        <p>
+                            The matrix is <i>n by n</i>, where n is the number of classes. The simplest
+                            classifiers, called <b>binary classifiers</b>, has only two classes:
+                            <i>positive/negative</i>, <i>yes/no</i>, <i>male/female</i>… 
+                            Performance of a binary classifier is summarized in a confusion matrix 
+                            that cross-tabulates predicted and observed examples into four options:
+                            <ul>
+                                <li>
+                                    <b>True Positive (TP):</b> Correctly predicting a label
+                                    (we predicted “yes”, and it’s “yes”),
+                                </li>
+                                <li>
+                                    <b>True Negative (TN):</b> Correctly predicting the other label
+                                    (we predicted “no”, and it’s “no”),
+                                </li>
+                                <li>
+                                    <b>False Positive (FP):</b> Falsely Predicting a label
+                                    (we predicted “yes”, but it's “no”),
+                                </li>
+                                <li>
+                                    <b>False Negative (FN):</b> Missing and incoming label
+                                    (we predicted “no”, but it’s “yes”).
+                                </li>
+                            </ul>
+                        </p>
+                        <br>
+                        <h4><b>Example: </b><i>Evaluating Spam Classifier</i></h4>
+                        <p>
+                            How can we use those metrics and what we can read from the 
+                            confusion matrix?  For instance, let's consider a classical 
+                            problem of <b>predicting spam and non-spam email</b>, by using binary 
+                            classification model.  Our dataset consists of 50 emails that 
+                            are Spam, and 105 emails that are Not Spam.  In order to evaluate 
+                            the performance of our developed model, which labels emails as 
+                            Spam or Not Spam, we can use confusion matrix, where the outcome 
+                            is formulated in a 2×2 <b>contingency table</b> or a <b>confusion matrix</b> 
+                            (link to confusion matrix with data):
+                        </p>
+                        <p>
+                            What can we read from the confusion matrix?
+                            <ul>
+                                <li>
+                                    Altogether, the classifier made <b>155 predictions</b> 
+                                    (155 emails were classified in Spar or Non-Spam class)
+                                </li>
+                                <li>
+                                    Out of 165 emails, 60 of them were labeled as Spam, and 
+                                    95 as Non-Spam
+                                </li>
+                                <li>
+                                    Further, we can observe that 9 of them was <b>falsely predicted</b> 
+                                    as Spam (False Positive), but only one of them was <b>falsely 
+                                    predicted</b> as Non-Spam (False Negative),
+                                </li>
+                                <li>
+                                    Conservative or Liberal?
+                                </li>
+                                <li>
+                                    By computing <a class="page-scroll table-links" href=" #measures">
+                                    <b>additional measures</b></a> (also called rates) from 
+                                    the classification matrix, we can get additional insight 
+                                    about our model (link to our metrics).
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Measures Section -->
     <section id="measures" class="measures-section">
         <div class="container" ng-controller="mainController">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="title">Measures Section</h1>
+                    <h1 class="title">Measures</h1>
                     <div ng-repeat="metric in metrics">
                         <b>{{metric.name}}</b> 
                         <br>
@@ -215,7 +307,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="title">Contact Section</h1>
+                    <h1 class="title">Contact</h1>
                     <div class="col-sm-8 col-sm-offset-2">
                         <aside>
                             <p>
