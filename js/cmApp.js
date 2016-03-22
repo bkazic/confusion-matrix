@@ -21,6 +21,14 @@ app.controller('mainController', function($scope){
             metric.update(TP, FP, FN, TN);
         })
 	}
+
+    // set example data and calculate metrics
+	$scope.setExample = function () {
+	    $scope.data = { TP: 1, FP: 2, FN: 3, TN: 4 };
+
+        // calculate metrics
+	    $scope.update();
+	}
 });
 
 //hack to use jQuery page-scroll inside ng-repeat 
