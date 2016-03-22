@@ -56,7 +56,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Confusion Matrix</a>
+                <a class="navbar-brand page-scroll" href="#page-top" ng-click="clearMatrix()">Confusion Matrix</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -135,13 +135,14 @@
                                                 <strong> Predicted Negative </strong>
                                             </td>
                                             <td class="col-xs-4">
-                                                <div class="has-warning">
-                                                    <label class="sr-only" for="FalseNegative"></label>
+                                                <div id="false-negative" class="has-warning" data-toggle="popover">
+                                                    <label class=" sr-only" for="FalseNegative">
+                                                    </label>
                                                     <input type="number" class="form-control text-center" placeholder="False Negative" ng-model="data.FN" ng-change="update()">
                                                 </div>
                                             </td>
                                             <td class="col-xs-4">
-                                                <div class="has-success">
+                                                <div id="true-negative" class="has-success" data-toggle="popover">
                                                     <label class="sr-only" for="TrueNegative"></label>
                                                     <input type="number" class="form-control text-center" placeholder="True Negative" ng-model="data.TN" ng-change="update()">
                                                 </div>
@@ -305,7 +306,7 @@
                         </p>
                         <!-- Example button -->
                         <div class="example-btn">
-                            <a class="btn btn-default btn-lg page-scroll" href="#intro" ng-click="setExample()">Try it out!</a>
+                            <a id="example" class="btn btn-default btn-lg page-scroll" href="#intro" ng-click="setExample()">Try it out!</a>
                         </div>
                     </div>
                 </div>
@@ -416,6 +417,9 @@
 
     <!-- Confusion Matrix -->
     <script src="js/metrics.js"></script>
+
+    <!-- Popovers -->
+    <script src="js/popovers.js"></script>
 
     <!-- </div> -->
 </body>

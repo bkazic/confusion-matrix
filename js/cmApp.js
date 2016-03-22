@@ -29,6 +29,14 @@ app.controller('mainController', function($scope){
         // calculate metrics
 	    $scope.update();
 	}
+
+    // clear matrix
+	$scope.clearMatrix = function () {
+	    $scope.data = { TP: null, FP: null, FN: null, TN: null };
+
+	    // calculate metrics
+	    $scope.update();
+	}
 });
 
 //hack to use jQuery page-scroll inside ng-repeat 
@@ -60,6 +68,22 @@ app.directive('tableScroll', function () {
 //            }, function () {
 //                // on mouseleave
 //                $(element).tooltip('hide');
+//            });
+//        }
+//    };
+//});
+
+//// ref: http://jsfiddle.net/ivankovachev/U4GLT/
+//app.directive('customPopover', function () {
+//    return {
+//        restrict: 'A',
+//        link: function (scope, el, attrs) {
+//            $(el).popover({
+//                trigger: 'click',
+//                html: true,
+//                title: attrs.popoverTitle,
+//                content: attrs.popoverHtml,
+//                placement: attrs.popoverPlacement
 //            });
 //        }
 //    };
