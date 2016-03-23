@@ -50,14 +50,14 @@ of those sections to manage the look and feel of the site. */
     min-height: 100%;	
     padding: 150px 0 50px 0;
     text-align: center;
-    background: #fff;
+    background: #eee;
 }
 
 .measures-section {
     min-height: 100%;	
     padding: 150px 0 50px 0;
     text-align: center;
-    background: #eee;
+    background: #fff;
 }
 
 .contact-section {

@@ -1,15 +1,39 @@
-﻿$("#false-negative").popover({
+﻿$("#true-positive").popover({
     trigger: 'manual',
-    placement: 'left',
-    title: 'False Negative',
-    content: 'False Negative yada yada yada'
+    placement: 'top',
+    title: 'True Positive',
+    content: '10 emails were correctly classified as Spam',
+    container: 'body' //allows to be wider than this container 
 })
 
 $("#true-negative").popover({
     trigger: 'manual',
     placement: 'right',
     title: 'True Negative',
-    content: 'True Negative yada yada yada',
+    content: '85 emails were correctly classified as Non-Spam',
+    container: 'body' //allows to be wider than this container 
+})
+
+$("#false-negative").popover({
+    trigger: 'manual',
+    placement: 'left',
+    title: 'False Negative',
+    content: '5 emails, which were actual Spam, were not predicted as Spam '
+})
+
+$("#false-positive").popover({
+    trigger: 'manual',
+    placement: 'top',
+    title: 'False Positive',
+    content: 'No email was falsely predicted as Spam',
+    container: 'body' //allows to be wider than this container 
+})
+
+$("#calculate-button").popover({
+    trigger: 'manual',
+    placement: 'right',
+    title: 'Aditional Measures',
+    content: 'By computing additional measures, we get can get more insight about the model',
     container: 'body' //allows to be wider than this container 
 })
 
@@ -18,8 +42,11 @@ $("#true-negative").popover({
 $("#example-button").click(function () {
     //$("#test1").popover('show');
     setTimeout(function () {
-        $('#false-negative').popover('show');
+        $('#true-positive').popover('show');
         $('#true-negative').popover('show');
+        $('#false-negative').popover('show');
+        $('#false-positive').popover('show');
+        $('#calculate-button').popover('show');
     }, 1000); //delay popover for 1 sec
 });
 

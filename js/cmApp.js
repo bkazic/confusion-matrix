@@ -24,7 +24,7 @@ app.controller('mainController', function($scope){
 
     // set example data and calculate metrics
 	$scope.setExample = function () {
-	    $scope.data = { TP: 1, FP: 2, FN: 3, TN: 4 };
+	    $scope.data = { TP: 10, FP: 0, FN: 5, TN: 85 };
 
         // calculate metrics
 	    $scope.update();

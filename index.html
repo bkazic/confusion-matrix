@@ -70,10 +70,10 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#example">Example</a>
+                        <a class="page-scroll" href="#measures">Measures</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#measures">Measures</a>
+                        <a class="page-scroll" href="#example">Example</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -118,13 +118,13 @@
                                                 <strong> Predicted Positive </strong>
                                             </td>
                                             <td class="col-xs-4">
-                                                <div class="has-success">
+                                                <div id="true-positive" class="has-success" data-toggle="popover">
                                                     <label class="sr-only" for="TruePositive"></label>
                                                     <input type="number" class="form-control text-center" placeholder="True Positive" ng-model="data.TP" ng-change="update()">
                                                 </div>
                                             </td>
                                             <td class="col-xs-4">
-                                                <div class="has-warning">
+                                                <div id="false-positive" class="has-warning" data-toggle="popover">
                                                     <label class="sr-only" for="FalsePositive"></label>
                                                     <input type="number" class="form-control text-center" placeholder="False Positive" ng-model="data.FP" ng-change="update()">
                                                 </div>
@@ -156,7 +156,7 @@
                     </div>
                     <!-- Calculate button -->
                     <div class="calculate-btn">
-                        <a class="btn btn-default btn-lg page-scroll" href="#ads">Calculate</a>
+                        <a id="calculate-button" class="btn btn-default btn-lg page-scroll" href="#ads" data-toggle="popover">Calculate</a>
                     </div>
 
                     <!-- Google Ads -->
@@ -250,6 +250,23 @@
         </div>
     </section>
 
+    <!-- Measures Section -->
+    <section id="measures" class="measures-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="title">Measures</h1>
+                    <div ng-repeat="metric in metrics">
+                        <b>{{metric.name}}</b>
+                        <br>
+                        {{metric.longName}}
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Example Section -->
     <section id="example" class="example-section">
         <div class="container">
@@ -289,8 +306,9 @@
                                 </li>
                                 <li>
                                     Further, 5 out of 100 emails were <b>classified falsely</b>: 
-                                    5 emails, which were actual Spam, were not predicted as Spam. 
-                                    And more important, no email was falsely predicted as Spam (which is very desired). 
+                                    5 emails, which were actual Spam, were not predicted as Spam (<b>False Negative</b>). 
+                                    And more important, no email was falsely predicted as Spam (<b>False Positive</b>), 
+                                    which is very desired in this case. 
                                 </li>
                                 <li>
                                     We can observe that our model is very conservative when it comes to  predicting Spam.
@@ -299,10 +317,8 @@
                                 </li>
                                 <li>
                                     By computing <a class="page-scroll table-links" href=" #measures">
-                                        <b>additional measures</b>
-                                    </a> (also called rates) from
-                                    the classification matrix, we can get additional insight
-                                    about our model (link to our metrics).
+                                    <b>additional measures</b></a> (also called rates) from the classification 
+                                    matrix, we can get additional insight about our model.
                                 </li>
                             </ul>
                         </p>
@@ -310,23 +326,6 @@
                         <div class="example-btn">
                             <a id="example-button" class="btn btn-default btn-lg page-scroll" href="#intro" ng-click="setExample()">Try it out!</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Measures Section -->
-    <section id="measures" class="measures-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="title">Measures</h1>
-                    <div ng-repeat="metric in metrics">
-                        <b>{{metric.name}}</b>
-                        <br>
-                        {{metric.longName}}
-                        <br><br>
                     </div>
                 </div>
             </div>
