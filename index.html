@@ -107,10 +107,10 @@
                                         <tr>
                                             <td></td>
                                             <td class="col-xs-4">
-                                                <strong> Actual Positive </strong>
+                                                <strong> True Positive </strong>
                                             </td>
                                             <td class="col-xs-4">
-                                                <strong> Actual Negative </strong>
+                                                <strong> True Negative </strong>
                                             </td>
                                         </tr>
                                         <tr>
@@ -275,25 +275,27 @@
                             (link to confusion matrix with data):
                         </p>
                         <p>
-                            What can we read from the confusion matrix?
                             <ul>
                                 <li>
-                                    Altogether, the classifier made <b>155 predictions</b>
-                                    (155 emails were classified in Spar or Non-Spam class)
+                                    Altogether, the classifier made <b>100 predictions</b>
+                                    (100 emails were classified in Spam or Non-Spam class)
                                 </li>
                                 <li>
-                                    Out of 165 emails, 60 of them were labeled as Spam, and
-                                    95 as Non-Spam
+                                    Out of 100 emails, our model <b>correctly classified</b> 95 emails: 
+                                    85 were correctly classified as Non-Spam, 
+                                    and 10 of them were correctly classified as Spam.
+                                    This result to <a class="page-scroll table-links" href=" #measures">
+                                    <b>95% accuracy</b></a>.
                                 </li>
                                 <li>
-                                    Further, we can observe that 9 of them was <b>falsely predicted</b>
-                                    as Spam (False Positive), but only one of them was <b>
-                                        falsely
-                                        predicted
-                                    </b> as Non-Spam (False Negative),
+                                    Further, 5 out of 100 emails were <b>classified falsely</b>: 
+                                    5 emails, which were actual Spam, were not predicted as Spam. 
+                                    And more important, no email was falsely predicted as Spam (which is very desired). 
                                 </li>
                                 <li>
-                                    Conservative or Liberal?
+                                    We can observe that our model is very conservative when it comes to  predicting Spam.
+                                    Therfore, the <a class="page-scroll table-links" href=" #measures">
+                                    <b>precision</b></a> of this of this model is very high: 1.0.
                                 </li>
                                 <li>
                                     By computing <a class="page-scroll table-links" href=" #measures">
@@ -306,7 +308,7 @@
                         </p>
                         <!-- Example button -->
                         <div class="example-btn">
-                            <a id="example" class="btn btn-default btn-lg page-scroll" href="#intro" ng-click="setExample()">Try it out!</a>
+                            <a id="example-button" class="btn btn-default btn-lg page-scroll" href="#intro" ng-click="setExample()">Try it out!</a>
                         </div>
                     </div>
                 </div>

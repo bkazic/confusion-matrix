@@ -15,7 +15,7 @@ $("#true-negative").popover({
 
 // On each button click, hide the currently displayed popover
 // and show the next one.
-$("#example").click(function () {
+$("#example-button").click(function () {
     //$("#test1").popover('show');
     setTimeout(function () {
         $('#false-negative').popover('show');
