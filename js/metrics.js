@@ -125,7 +125,7 @@ metrics.mcc = {
     shortName: "MCC",
     longName: "Matthews Correlation Coefficient (MCC)",
     description: "",
-    derivation: "F1 = 2TP / (2TP + FP + FN)",
+    derivation: "TP*TN - FP*FN / sqrt((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN))",
     value: undefined,
     update: function (TP, FP, FN, TN) {
         this.value = (TP*TN - FP*FN) / Math.sqrt((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN));
